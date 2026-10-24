@@ -36,3 +36,31 @@ This project uses a small sample dataset. The findings are illustrative and shou
 
 ## About
 This is a portfolio project demonstrating SQL skills relevant to Data Analyst and Business Intelligence roles.
+
+## SQL Project Files
+
+The SQL scripts in this repository cover the following areas:
+
+| Analysis Area | Purpose |
+|---|---|
+| Data Exploration | Understand the available tables and dataset structure. |
+| Customer Data Quality | Check missing values, blank fields, and duplicate email addresses. |
+| Product Data Quality | Validate product records and prices. |
+| Order Data Quality | Check order completeness, valid totals, and customer relationships. |
+| Order Item Data Quality | Validate quantities, unit prices, and order/product relationships. |
+| Order Status Analysis | Compare order counts and order values by status. |
+| Customer Analysis | Summarise customer purchasing activity. |
+| Product Sales Analysis | Identify products contributing to sales value. |
+| Category Analysis | Compare sales performance across product categories. |
+| Monthly Revenue Analysis | Track monthly revenue and changes over time. |
+| Customer Retention Analysis | Measure monthly active customers, repeat purchases, retention, and churn. |
+
+### Featured Analysis: Customer Retention
+
+The `13_customer_retention_analysis.sql` script investigates customer activity and repeat purchases, calculates month-over-month retention and churn rates, and identifies the month with the lowest retention.
+
+### How to Use This Project
+
+1. Open a SQL script in the repository.
+2. Run it in a PostgreSQL-compatible environment with the project tables loaded.
+3. Review the query output and compare the results with the documented business findings.
