@@ -59,6 +59,21 @@ The SQL scripts in this repository cover the following areas:
 
 The `13_customer_retention_analysis.sql` script investigates customer activity and repeat purchases, calculates month-over-month retention and churn rates, and identifies the month with the lowest retention.
 
+
+## Business Results Summary
+
+| Business Question | Finding | SQL Skill Demonstrated |
+|---|---|---|
+| How did monthly revenue change? | Revenue peaked in March 2026 at 283.00, then fell to 127.00 in April. | `SUM()`, `GROUP BY`, date functions |
+| Which product had the highest sales value? | Mechanical Keyboard, with a sales value of 178.00 in the product analysis. | `JOIN`, aggregation, sorting |
+| How many customers made repeat purchases? | Four customers had more than one non-returned order. | `GROUP BY`, `HAVING`, `COUNT()` |
+| What was the April retention rate? | 25% | CTEs, self-joins, `COUNT(DISTINCT ...)` |
+| What was the April churn rate? | 75% | Conditional calculations, `COALESCE()`, `NULLIF()` |
+
+**Interpretation:** The sample data shows a decline in monthly revenue after March and lower customer retention in April. These findings could prompt further investigation into repeat purchasing, product demand, and customer engagement.
+
+*Note: These results come from a small sample dataset. Revenue and order-status measures should be interpreted according to the definitions used in the SQL scripts.*
+
 ### How to Use This Project
 
 1. Open a SQL script in the repository.
