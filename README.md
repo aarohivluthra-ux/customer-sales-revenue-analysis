@@ -74,6 +74,21 @@ The `13_customer_retention_analysis.sql` script investigates customer activity a
 
 *Note: These results come from a small sample dataset. Revenue and order-status measures should be interpreted according to the definitions used in the SQL scripts.*
 
+
+## Business Recommendations
+
+Based on the findings from this sample dataset, the following actions could be investigated:
+
+1. **Investigate the April revenue decline:** Review April order counts, average order value, product-level sales, and order statuses to understand the decline from March.
+2. **Understand customer retention:** Identify customers who purchased in March but did not purchase in April, then examine their earlier purchasing behaviour.
+3. **Review repeat-purchase patterns:** Explore which products and categories are associated with repeat orders.
+4. **Monitor monthly performance:** Track revenue, active customers, retention, and churn consistently over subsequent months.
+5. **Validate findings with more data:** Analyse a larger dataset covering more customers and months before making major business decisions.
+
+*These are hypotheses for further investigation, not proven causes or guaranteed business outcomes. The current dataset is small.*
+
+
+
 ### How to Use This Project
 
 1. Open a SQL script in the repository.
