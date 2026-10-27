@@ -1,96 +1,48 @@
-# Customer Sales and Revenue Analysis
+# Customer Sales & Revenue Analysis
 
 ## Project Overview
-This project uses SQL and PostgreSQL to analyse customer behaviour, sales performance, product revenue, and customer retention. The goal is to turn raw sales data into meaningful business insights.
+An end-to-end data analytics portfolio project using SQL and Microsoft Power BI to explore customer activity, sales performance, product revenue, and order status.
 
-## Business Objectives
-- Explore customer, product, order, and order-item data.
-- Assess data quality and identify potential data issues.
-- Analyse sales revenue by order status, product category, and month.
-- Identify repeat customers and measure monthly customer retention and churn.
-- Highlight trends that could support business decisions.
+The project demonstrates data exploration, data quality validation, relational data modelling, DAX calculations, dashboard development, and business-oriented reporting.
 
-## Tools and Technologies
-- SQL
-- PostgreSQL
-- GitHub
-
-## Database Tables
-- **customers:** Customer details and signup dates.
-- **products:** Product names, categories, and prices.
-- **orders:** Order dates, statuses, customer IDs, and order totals.
-- **order_items:** Products and quantities associated with each order.
-
-## Key Analysis and Findings
-- Monthly revenue increased from January to March 2026, then declined in April.
-- Mechanical Keyboard was the highest-selling product by sales value in the product analysis.
-- Four customers placed more than one non-returned order.
-- Monthly customer retention was 50% in February and March, falling to 25% in April.
-- April's calculated customer churn rate was 75%.
+## Tools & Technologies
+- **SQL (PostgreSQL-compatible):** Data exploration, joins, aggregations, data quality checks, and business analysis
+- **Microsoft Power BI:** Data modelling, DAX measures, KPI cards, and visualisations
+- **GitHub:** Version control and project documentation
 
 ## Project Structure
-The SQL scripts are numbered and organised by analysis topic, including data exploration, data quality checks, sales summaries, monthly revenue trends, and customer retention analysis.
 
-## Limitations
-This project uses a small sample dataset. The findings are illustrative and should not be treated as definitive evidence of long-term customer behaviour.
+### SQL Analysis
+SQL scripts cover data exploration, data quality checks, order-status analysis, customer summaries, product performance, category analysis, and monthly trends.
 
-## About
-This is a portfolio project demonstrating SQL skills relevant to Data Analyst and Business Intelligence roles.
+### Power BI Dashboard
+The dashboard presents:
+- Total recorded order revenue: **704.50**
+- Total orders: **12**
+- Total customers: **8**
+- Monthly revenue trend
+- Revenue by product category
+- Orders by status
+- Top five products by revenue
 
-## SQL Project Files
+[View the Power BI dashboard and screenshot](power-bi-dashboard/README.md)
 
-The SQL scripts in this repository cover the following areas:
+### Business Insights
+The business insights document summarises monthly trends, product performance, data quality checks, recommendations, and limitations.
 
-| Analysis Area | Purpose |
-|---|---|
-| Data Exploration | Understand the available tables and dataset structure. |
-| Customer Data Quality | Check missing values, blank fields, and duplicate email addresses. |
-| Product Data Quality | Validate product records and prices. |
-| Order Data Quality | Check order completeness, valid totals, and customer relationships. |
-| Order Item Data Quality | Validate quantities, unit prices, and order/product relationships. |
-| Order Status Analysis | Compare order counts and order values by status. |
-| Customer Analysis | Summarise customer purchasing activity. |
-| Product Sales Analysis | Identify products contributing to sales value. |
-| Category Analysis | Compare sales performance across product categories. |
-| Monthly Revenue Analysis | Track monthly revenue and changes over time. |
-| Customer Retention Analysis | Measure monthly active customers, repeat purchases, retention, and churn. |
+[Read the business insights](power-bi-dashboard/business-insights.md)
 
-### Featured Analysis: Customer Retention
+## Key Findings
+- March 2026 had the highest recorded monthly order total at **283.00**.
+- April's recorded order total decreased by **156.00** compared with March.
+- Mechanical Keyboard was the top product in the SQL product analysis, with item-level revenue of **178.00**.
+- SQL quality checks found no differences in the order-total reconciliation for this sample dataset.
 
-The `13_customer_retention_analysis.sql` script investigates customer activity and repeat purchases, calculates month-over-month retention and churn rates, and identifies the month with the lowest retention.
+## Important Metric Note
+Recorded order revenue is calculated from `orders.total` and includes returned orders. Product-level revenue is calculated from quantity multiplied by unit price. These measures are not interchangeable without further reconciliation.
 
+## Project Limitations
+The dataset contains a small sample of eight customers and twelve orders across four months. Findings are descriptive and should not be interpreted as established long-term business trends.
 
-## Business Results Summary
-
-| Business Question | Finding | SQL Skill Demonstrated |
-|---|---|---|
-| How did monthly revenue change? | Revenue peaked in March 2026 at 283.00, then fell to 127.00 in April. | `SUM()`, `GROUP BY`, date functions |
-| Which product had the highest sales value? | Mechanical Keyboard, with a sales value of 178.00 in the product analysis. | `JOIN`, aggregation, sorting |
-| How many customers made repeat purchases? | Four customers had more than one non-returned order. | `GROUP BY`, `HAVING`, `COUNT()` |
-| What was the April retention rate? | 25% | CTEs, self-joins, `COUNT(DISTINCT ...)` |
-| What was the April churn rate? | 75% | Conditional calculations, `COALESCE()`, `NULLIF()` |
-
-**Interpretation:** The sample data shows a decline in monthly revenue after March and lower customer retention in April. These findings could prompt further investigation into repeat purchasing, product demand, and customer engagement.
-
-*Note: These results come from a small sample dataset. Revenue and order-status measures should be interpreted according to the definitions used in the SQL scripts.*
-
-
-## Business Recommendations
-
-Based on the findings from this sample dataset, the following actions could be investigated:
-
-1. **Investigate the April revenue decline:** Review April order counts, average order value, product-level sales, and order statuses to understand the decline from March.
-2. **Understand customer retention:** Identify customers who purchased in March but did not purchase in April, then examine their earlier purchasing behaviour.
-3. **Review repeat-purchase patterns:** Explore which products and categories are associated with repeat orders.
-4. **Monitor monthly performance:** Track revenue, active customers, retention, and churn consistently over subsequent months.
-5. **Validate findings with more data:** Analyse a larger dataset covering more customers and months before making major business decisions.
-
-*These are hypotheses for further investigation, not proven causes or guaranteed business outcomes. The current dataset is small.*
-
-
-
-### How to Use This Project
-
-1. Open a SQL script in the repository.
-2. Run it in a PostgreSQL-compatible environment with the project tables loaded.
-3. Review the query output and compare the results with the documented business findings.
+## Skills Demonstrated
+SQL querying, data quality validation, relational data modelling, DAX, KPI development, data visualisation, business analysis, and technical documentation.
