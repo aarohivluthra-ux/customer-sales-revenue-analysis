@@ -44,3 +44,8 @@ The Total Revenue KPI uses recorded order totals and currently includes returned
 
 ## Skills Demonstrated
 SQL querying, data quality validation, relational data modelling, DAX, KPI development, data visualisation, and business analysis.
+
+## Dashboard Preview
+
+![Customer Sales & Revenue Analysis Dashboard](dashboard-screenshot.png)
+
